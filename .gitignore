@@ -1,0 +1,33 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+*.pyc
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Dados grandes e artefatos locais
+dados_brutos/*
+!dados_brutos/README.md
+artefatos/
+tmp/
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+
+# Logs
+*.log
