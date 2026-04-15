@@ -119,6 +119,39 @@ Campos esperados:
 - `densidade_complementares`
 - `confianca_geocodificacao`
 
+## Camadas de trabalho do POC atual
+
+### `processado/recorte`
+
+Primeiro recorte persistido do snapshot da cidade-alvo.
+
+Arquivos centrais:
+
+- `estabelecimentos_municipio.parquet`
+- `empresas_municipio.parquet`
+- `simples_municipio.parquet`
+
+### `processado/preparado`
+
+Camada intermediária com limpeza, chaves derivadas e trilha de qualidade para geocodificação.
+
+Arquivos centrais:
+
+- `estabelecimentos_preparados.parquet`
+- `empresas_preparadas.parquet`
+- `simples_preparados.parquet`
+- `estabelecimentos_geocodificados.parquet`
+
+### `processado/analitico`
+
+Camada pronta para consumo da API e da interface.
+
+Arquivos centrais:
+
+- `hex_segmento_atual.parquet`
+- `areas_detalhe_atual.parquet`
+- `qualidade_espacial_resumo.json`
+
 ## Qualidade e rastreabilidade
 
 Toda entidade derivada deve carregar:

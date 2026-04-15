@@ -20,6 +20,7 @@ O CNAE principal é um sinal relevante, mas não garante fidelidade perfeita ao 
 - registrar nível de confiança
 - manter flag de revisão
 - separar métricas de alta confiança de métricas exploratórias
+- reaproveitar cache de geocodificação para evitar consultas repetidas e inconsistentes
 
 ## Classificações mínimas
 
@@ -40,3 +41,4 @@ Sem precisão suficiente para análise fina por hexágono.
 - A interface deve exibir a qualidade do recorte.
 - Áreas com baixa cobertura não devem sugerir conclusões fortes.
 - Comparações devem informar denominadores e volume de observações.
+- A primeira camada espacial do POC pode usar geocodificação híbrida com parte dos registros ainda em confiança média ou baixa.

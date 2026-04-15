@@ -6,6 +6,9 @@ Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e
 
 - `01_inspecao_snapshot_cnpj.ipynb`
 - `02_recorte_cidade_e_exportacao.ipynb`
+- `03_preparacao_recorte.ipynb`
+- `04_geocodificacao_hibrida.ipynb`
+- `05_agregacao_espacial_h3.ipynb`
 
 ## Uso recomendado
 
@@ -14,8 +17,18 @@ Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e
 3. Deixar que o próprio notebook copie esse ZIP para `/content` e prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
 5. No `02`, processar uma família por vez, persistindo partes em disco em vez de carregar o snapshot inteiro em RAM.
-6. Produzir recortes processados para a cidade-alvo e evoluir as saídas em `processado/recorte`, `processado/preparado` e `processado/analitico`.
+6. No `03`, transformar `recorte` em `preparado`, derivando chaves, datas e status.
+7. No `04`, aplicar geocodificação híbrida barata com cache local e classificação de confiança.
+8. No `05`, agregar em H3 e produzir a camada `analitico`.
 
 ## Observação
 
 Os notebooks foram escritos em PT-BR e assumem um fluxo de trabalho com ZIP bruto no Google Drive e processamento temporário em `/content`, sem exigir que as camadas extraídas sejam mantidas no seu computador.
+
+As saídas esperadas desta sequência são:
+
+- `processado/recorte/*.parquet`
+- `processado/preparado/*.parquet`
+- `processado/preparado/qualidade_geocodificacao.csv`
+- `processado/analitico/*.parquet`
+- `processado/analitico/qualidade_espacial_resumo.json`

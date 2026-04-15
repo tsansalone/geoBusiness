@@ -20,6 +20,14 @@ O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal orig
 10. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
 11. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
 
+Sequência atual recomendada:
+
+1. `01_inspecao_snapshot_cnpj.ipynb`
+2. `02_recorte_cidade_e_exportacao.ipynb`
+3. `03_preparacao_recorte.ipynb`
+4. `04_geocodificacao_hibrida.ipynb`
+5. `05_agregacao_espacial_h3.ipynb`
+
 ## Boas práticas
 
 - Processar um mês por vez e consolidar no final.
@@ -29,6 +37,7 @@ O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal orig
 - Usar o Google Drive apenas como armazenamento do ZIP bruto.
 - Preferir o disco local da instância (`/content`) para todas as etapas temporárias de extração e processamento.
 - Em recortes municipais, processar uma família por vez e persistir partes em disco para reduzir uso de RAM.
+- Reaproveitar cache local de geocodificação durante a sessão sempre que possível.
 - Evitar manter `extraido` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados

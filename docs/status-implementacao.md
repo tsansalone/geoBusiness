@@ -21,6 +21,7 @@ Concluído:
 - nomenclatura das camadas processadas padronizada para `recorte`, `preparado` e `analitico`
 - notebooks ajustados para partir do ZIP original no Colab
 - notebook `02` ajustado para recorte em partes, com menor uso de RAM no Colab
+- notebooks `03`, `04` e `05` adicionados para preparação, geocodificação híbrida e agregação espacial em H3
 - contrato inicial do layout CNPJ
 - scripts de inspeção, manifesto e recorte
 
