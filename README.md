@@ -42,12 +42,14 @@ web/            Aplicação web em Next.js com interface em PT-BR
 
 Pré-requisitos:
 
-- Python 3.11+
+- Python 3.11+ com suporte validado em Python 3.14
 
 Comandos:
 
 ```bash
 cd api
+python -m venv .venv
+.venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
@@ -117,6 +119,12 @@ Este scaffold entrega:
 - notebooks para `recorte`, `preparado`, geocodificação híbrida e agregação H3
 - API pronta para ler `processado/analitico` quando os parquets reais estiverem disponíveis
 - documentação-base para evolução do projeto
+
+## Compatibilidade local
+
+- API validada com dependências compatíveis com Python `3.14`
+- CI continua executando a API em Python `3.11`
+- frontend validado com Node.js `20+`
 
 ## Publicação no GitHub
 

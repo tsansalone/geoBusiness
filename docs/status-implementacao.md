@@ -40,6 +40,8 @@ Concluído:
 - testes básicos da API
 - camada de leitura real por parquet com fallback sintético
 - respostas principais da API agora expõem a origem do dado
+- ambiente local da API validado com Python `3.14`
+- instalação das dependências, `pytest` e boot do Uvicorn confirmados localmente
 
 ## Frontend
 
@@ -60,5 +62,4 @@ Observação:
 Pendente de validação local:
 
 - Docker/PostGIS
-- instalação de dependências Python e Node
 - execução integrada ponta a ponta

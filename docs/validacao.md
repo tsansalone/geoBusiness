@@ -12,13 +12,26 @@ Script principal:
 
 O script tenta executar:
 
-1. instalação de dependências da API
-2. testes `pytest` da API
-3. instalação de dependências do frontend
-4. checagem de tipos com `tsc`
-5. build do frontend
+1. criação opcional da `.venv` local da API
+2. instalação de dependências da API
+3. testes `pytest` da API
+4. instalação de dependências do frontend
+5. checagem de tipos com `tsc`
+6. build do frontend
+
+Ele procura Python nesta ordem:
+
+- `.venv\Scripts\python.exe` dentro de `api/`
+- `python` no `PATH`
+
+Se encontrar apenas o Python global, ele usa esse executável para criar ou atualizar a `.venv` local da API antes da instalação.
 
 Se Python ou npm não estiverem disponíveis no ambiente, o script registra o motivo e pula a etapa correspondente.
+
+## Compatibilidade validada
+
+- API: Python `3.11` a `3.14`
+- Frontend: Node.js `20+`
 
 ## Validação contínua
 
@@ -43,12 +56,14 @@ Ele executa:
 
 Validação local já confirmada neste repositório:
 
+- `pip install -r requirements.txt` da API passou em Python `3.14`
+- `pytest` da API passou em Python `3.14`
 - `tsc --noEmit` do frontend passou
 - `next build` do frontend passou com a integração da API e fallback local
 
 Limitação do ambiente atual:
 
-- os testes da API não foram executados aqui porque o Python não está disponível neste ambiente local de trabalho
+- a validação completa da API depende de um Python local utilizável fora das restrições do sandbox
 
 ## O que ainda não cobre
 

@@ -2,18 +2,40 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "== GeoBusiness: validação local =="
 
-if (Get-Command python -ErrorAction SilentlyContinue) {
+function Obter-PythonApi {
+  $apiDir = Resolve-Path "$PSScriptRoot\..\..\api"
+  $venvPython = Join-Path $apiDir ".venv\Scripts\python.exe"
+
+  if (Test-Path $venvPython) {
+    return $venvPython
+  }
+
+  if (Get-Command python -ErrorAction SilentlyContinue) {
+    return "python"
+  }
+
+  return $null
+}
+
+$pythonApi = Obter-PythonApi
+
+if ($pythonApi) {
   Push-Location "$PSScriptRoot\..\..\api"
   try {
-    python -m pip install -r requirements.txt
-    python -m pytest
+    if ($pythonApi -eq "python" -and -not (Test-Path ".venv\Scripts\python.exe")) {
+      python -m venv .venv
+      $pythonApi = (Resolve-Path ".venv\Scripts\python.exe").Path
+    }
+
+    & $pythonApi -m pip install -r requirements.txt
+    & $pythonApi -m pytest
   }
   finally {
     Pop-Location
   }
 }
 else {
-  Write-Warning "Python não está disponível neste ambiente. Os testes da API foram pulados."
+  Write-Warning "Python não está disponível neste ambiente. A validação da API foi pulada."
 }
 
 if (Get-Command npm -ErrorAction SilentlyContinue) {
