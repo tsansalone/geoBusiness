@@ -20,6 +20,7 @@ Concluído:
 - nomenclatura de pastas simplificada para `original`, `extraido`, `processado` e `metadados`
 - nomenclatura das camadas processadas padronizada para `recorte`, `preparado` e `analitico`
 - notebooks ajustados para partir do ZIP original no Colab
+- notebook `02` ajustado para recorte em partes, com menor uso de RAM no Colab
 - contrato inicial do layout CNPJ
 - scripts de inspeção, manifesto e recorte
 

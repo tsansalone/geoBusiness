@@ -11,7 +11,7 @@ O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal orig
 1. Salvar o ZIP mensal original no Google Drive.
 2. Montar o Drive no Colab.
 3. Copiar apenas o ZIP do snapshot alvo para o disco local da instância.
-4. Executar o notebook para mover o ZIP para `original` e extrair os arquivos para `extraido`.
+4. Executar o notebook para copiar o ZIP para `original` e extrair os arquivos para `extraido`.
 5. Ler os arquivos texto com separador `;`.
 6. Validar colunas esperadas com base no contrato do projeto.
 7. Filtrar a cidade-alvo.
@@ -28,6 +28,7 @@ O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal orig
 - Não commitar snapshots brutos grandes no Git.
 - Usar o Google Drive apenas como armazenamento do ZIP bruto.
 - Preferir o disco local da instância (`/content`) para todas as etapas temporárias de extração e processamento.
+- Em recortes municipais, processar uma família por vez e persistir partes em disco para reduzir uso de RAM.
 - Evitar manter `extraido` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados

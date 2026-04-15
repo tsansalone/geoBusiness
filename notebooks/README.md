@@ -13,7 +13,8 @@ Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e
 2. Montar o Google Drive e manter nele apenas o ZIP mensal original.
 3. Deixar que o próprio notebook copie esse ZIP para `/content` e prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
-5. Produzir recortes processados para a cidade-alvo e evoluir as saídas em `processado/recorte`, `processado/preparado` e `processado/analitico`.
+5. No `02`, processar uma família por vez, persistindo partes em disco em vez de carregar o snapshot inteiro em RAM.
+6. Produzir recortes processados para a cidade-alvo e evoluir as saídas em `processado/recorte`, `processado/preparado` e `processado/analitico`.
 
 ## Observação
 
