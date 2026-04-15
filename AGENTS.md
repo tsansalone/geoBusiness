@@ -96,6 +96,7 @@ Arquivos mais comuns para atualizar:
 - `docs/processo-colab.md`
 - `docs/operacao-do-snapshot.md`
 - `docs/status-implementacao.md`
+- `docs/validacao.md`
 
 ## Convenções de commit
 

@@ -42,6 +42,11 @@ Em andamento:
 - aplicação Next.js em PT-BR
 - mapa analítico com grade hexagonal sintética
 - painéis de detalhe, comparação e qualidade
+- build sintético validado com sucesso no ambiente local
+
+Observação:
+
+- a versão atual do `next` ainda precisa ser atualizada para uma versão corrigida de segurança
 
 ## Infra
 

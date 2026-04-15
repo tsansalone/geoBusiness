@@ -91,6 +91,7 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 - [Processo Colab](</C:/Users/Thiago/geoBusiness/docs/processo-colab.md>)
 - [Qualidade dos dados](</C:/Users/Thiago/geoBusiness/docs/qualidade-dos-dados.md>)
 - [Status da implementação](</C:/Users/Thiago/geoBusiness/docs/status-implementacao.md>)
+- [Validação e testes](</C:/Users/Thiago/geoBusiness/docs/validacao.md>)
 - [Decisões arquiteturais](</C:/Users/Thiago/geoBusiness/docs/decisoes>)
 - [Guia para agentes e desenvolvedores](</C:/Users/Thiago/geoBusiness/AGENTS.md>)
 

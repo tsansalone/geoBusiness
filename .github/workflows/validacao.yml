@@ -1,0 +1,52 @@
+name: Validacao
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias da API
+        run: pip install -r api/requirements.txt
+
+      - name: Rodar testes da API
+        working-directory: api
+        run: pytest
+
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: web/package.json
+
+      - name: Instalar dependencias do frontend
+        working-directory: web
+        run: npm install
+
+      - name: Validar tipagem
+        working-directory: web
+        run: npx tsc --noEmit
+
+      - name: Gerar build do frontend
+        working-directory: web
+        run: npm run build
