@@ -1,0 +1,387 @@
+:root {
+  --fundo: #f4efe5;
+  --superficie: rgba(255, 250, 242, 0.86);
+  --texto: #142118;
+  --texto-claro: #edf5ef;
+  --muted: #576659;
+  --borda: rgba(20, 33, 24, 0.12);
+  --acento: #d88736;
+  --alerta: #a4523b;
+  --sombra: 0 24px 60px rgba(18, 28, 21, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: radial-gradient(circle at top, #ebe3d4 0%, var(--fundo) 48%, #ede6d9 100%);
+}
+
+body {
+  margin: 0;
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.pagina {
+  padding: 28px;
+}
+
+.hero {
+  background:
+    linear-gradient(135deg, rgba(10, 22, 17, 0.92), rgba(28, 52, 40, 0.83)),
+    radial-gradient(circle at right, rgba(240, 176, 96, 0.18), transparent 38%);
+  color: var(--texto-claro);
+  border-radius: 32px;
+  padding: 28px 32px 34px;
+  box-shadow: var(--sombra);
+}
+
+.hero__marca {
+  font-size: 0.86rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.hero__conteudo {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 28px;
+  align-items: end;
+}
+
+.hero__kicker,
+.etiqueta {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(237, 245, 239, 0.72);
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.96;
+  margin: 10px 0 18px;
+  max-width: 12ch;
+}
+
+.hero__texto {
+  max-width: 56ch;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(237, 245, 239, 0.86);
+}
+
+.hero__dados {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.hero__dados strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.workspace {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 22px;
+}
+
+.filtros,
+.painel,
+.painel-mapa,
+.faixa-kpis article {
+  background: var(--superficie);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+}
+
+.filtros {
+  border-radius: 28px;
+  padding: 18px;
+  display: grid;
+  gap: 18px;
+  align-self: start;
+  position: sticky;
+  top: 18px;
+}
+
+.bloco {
+  display: grid;
+  gap: 12px;
+}
+
+.bloco--resumo p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lista-segmentos,
+.lista-metricas {
+  display: grid;
+  gap: 10px;
+}
+
+.chip,
+.linha {
+  width: 100%;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--texto);
+  padding: 12px 14px;
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.chip small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.chip:hover,
+.linha:hover {
+  transform: translateY(-1px);
+  border-color: rgba(216, 135, 54, 0.36);
+}
+
+.chip--ativo,
+.linha--ativa {
+  background: rgba(216, 135, 54, 0.12);
+  border-color: rgba(216, 135, 54, 0.56);
+}
+
+.superficie {
+  display: grid;
+  gap: 18px;
+}
+
+.faixa-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.faixa-kpis article {
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.faixa-kpis strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.5rem;
+}
+
+.painel-mapa {
+  border-radius: 30px;
+  padding: 22px;
+}
+
+.painel-mapa__cabecalho {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  align-items: end;
+}
+
+.painel-mapa__cabecalho h2,
+.painel h3 {
+  margin: 8px 0 0;
+  font-size: 1.65rem;
+}
+
+.painel-mapa__cabecalho p,
+.texto-suporte {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.mapa-shell {
+  margin-top: 18px;
+  padding: 10px;
+  background: rgba(10, 22, 17, 0.06);
+  border-radius: 24px;
+}
+
+.mapa-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mapa__valor {
+  fill: #fff7e6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mapa__rotulo {
+  fill: rgba(255, 247, 230, 0.72);
+  font-size: 8px;
+}
+
+.grade-inferior {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 1fr;
+  gap: 18px;
+}
+
+.painel {
+  border-radius: 28px;
+  padding: 22px;
+}
+
+.metricas-grid,
+.qualidade-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metricas-grid div,
+.qualidade-grid div {
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.metricas-grid small,
+.qualidade-grid small {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.metricas-grid strong,
+.qualidade-grid strong {
+  font-size: 1.2rem;
+}
+
+.mini-serie {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.barras {
+  height: 88px;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.barras span {
+  flex: 1;
+  border-radius: 999px 999px 6px 6px;
+  background: linear-gradient(180deg, #f0b060, #d88736);
+}
+
+.barras--baixas span {
+  background: linear-gradient(180deg, #cf8f7c, #a4523b);
+}
+
+.lista-motivos,
+.lista-comparacao {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.lista-motivos li,
+.lista-comparacao li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.lista-comparacao li {
+  align-items: start;
+}
+
+.lista-comparacao small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.comparacao__numeros {
+  display: grid;
+  gap: 6px;
+  text-align: right;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.painel--qualidade {
+  background:
+    linear-gradient(135deg, rgba(255, 248, 236, 0.94), rgba(247, 237, 220, 0.94)),
+    radial-gradient(circle at right top, rgba(216, 135, 54, 0.16), transparent 42%);
+}
+
+@media (max-width: 1080px) {
+  .workspace,
+  .hero__conteudo,
+  .painel-mapa__cabecalho,
+  .grade-inferior,
+  .faixa-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros {
+    position: static;
+  }
+
+  .metricas-grid,
+  .qualidade-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .pagina {
+    padding: 16px;
+  }
+
+  .hero,
+  .painel-mapa,
+  .painel,
+  .filtros {
+    border-radius: 24px;
+  }
+
+  .metricas-grid,
+  .qualidade-grid,
+  .mini-serie {
+    grid-template-columns: 1fr;
+  }
+}
