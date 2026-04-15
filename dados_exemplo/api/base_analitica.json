@@ -1,0 +1,358 @@
+{
+  "cidade": {
+    "id": "3550308",
+    "nome": "São Paulo - SP",
+    "fonte": "base_sintetica_poc"
+  },
+  "segmentos": [
+    {
+      "id": "cafeterias",
+      "cnae_principal": "5611203",
+      "nome": "Cafeterias",
+      "descricao": "Operações focadas em café, bebidas quentes e permanência curta."
+    },
+    {
+      "id": "farmacias",
+      "cnae_principal": "4771701",
+      "nome": "Farmácias",
+      "descricao": "Comércio varejista farmacêutico com operação de bairro."
+    },
+    {
+      "id": "academias",
+      "cnae_principal": "9313100",
+      "nome": "Academias",
+      "descricao": "Serviços de condicionamento físico e treino recorrente."
+    }
+  ],
+  "metricas_disponiveis": [
+    "ativos",
+    "aberturas_24m",
+    "baixas_24m",
+    "taxa_fechamento",
+    "densidade_segmento"
+  ],
+  "hexagonos": [
+    {
+      "hex_id": "89a81000001ffff",
+      "nome_area": "República Norte",
+      "centro_x": 180,
+      "centro_y": 140,
+      "vizinhos": ["89a81000002ffff", "89a81000004ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 24,
+          "aberturas_24m": 11,
+          "baixas_24m": 4,
+          "taxa_fechamento": 0.16,
+          "densidade_segmento": 0.82,
+          "densidade_complementares": 0.74,
+          "idade_mediana_meses": 28,
+          "percentil_saturacao": 79,
+          "confianca_geografica": "alta"
+        },
+        "farmacias": {
+          "ativos": 8,
+          "aberturas_24m": 2,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.11,
+          "densidade_segmento": 0.34,
+          "densidade_complementares": 0.49,
+          "idade_mediana_meses": 52,
+          "percentil_saturacao": 63,
+          "confianca_geografica": "alta"
+        },
+        "academias": {
+          "ativos": 6,
+          "aberturas_24m": 2,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.14,
+          "densidade_segmento": 0.21,
+          "densidade_complementares": 0.38,
+          "idade_mediana_meses": 31,
+          "percentil_saturacao": 58,
+          "confianca_geografica": "alta"
+        }
+      }
+    },
+    {
+      "hex_id": "89a81000002ffff",
+      "nome_area": "República Sul",
+      "centro_x": 260,
+      "centro_y": 140,
+      "vizinhos": ["89a81000001ffff", "89a81000003ffff", "89a81000005ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 18,
+          "aberturas_24m": 9,
+          "baixas_24m": 7,
+          "taxa_fechamento": 0.29,
+          "densidade_segmento": 0.66,
+          "densidade_complementares": 0.72,
+          "idade_mediana_meses": 19,
+          "percentil_saturacao": 71,
+          "confianca_geografica": "media"
+        },
+        "farmacias": {
+          "ativos": 7,
+          "aberturas_24m": 1,
+          "baixas_24m": 0,
+          "taxa_fechamento": 0.04,
+          "densidade_segmento": 0.28,
+          "densidade_complementares": 0.52,
+          "idade_mediana_meses": 61,
+          "percentil_saturacao": 49,
+          "confianca_geografica": "media"
+        },
+        "academias": {
+          "ativos": 4,
+          "aberturas_24m": 1,
+          "baixas_24m": 2,
+          "taxa_fechamento": 0.33,
+          "densidade_segmento": 0.16,
+          "densidade_complementares": 0.29,
+          "idade_mediana_meses": 14,
+          "percentil_saturacao": 43,
+          "confianca_geografica": "media"
+        }
+      }
+    },
+    {
+      "hex_id": "89a81000003ffff",
+      "nome_area": "Bela Vista Leste",
+      "centro_x": 340,
+      "centro_y": 140,
+      "vizinhos": ["89a81000002ffff", "89a81000006ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 29,
+          "aberturas_24m": 14,
+          "baixas_24m": 3,
+          "taxa_fechamento": 0.11,
+          "densidade_segmento": 0.91,
+          "densidade_complementares": 0.85,
+          "idade_mediana_meses": 33,
+          "percentil_saturacao": 91,
+          "confianca_geografica": "alta"
+        },
+        "farmacias": {
+          "ativos": 10,
+          "aberturas_24m": 2,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.09,
+          "densidade_segmento": 0.39,
+          "densidade_complementares": 0.54,
+          "idade_mediana_meses": 68,
+          "percentil_saturacao": 71,
+          "confianca_geografica": "alta"
+        },
+        "academias": {
+          "ativos": 7,
+          "aberturas_24m": 3,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.13,
+          "densidade_segmento": 0.23,
+          "densidade_complementares": 0.33,
+          "idade_mediana_meses": 37,
+          "percentil_saturacao": 62,
+          "confianca_geografica": "alta"
+        }
+      }
+    },
+    {
+      "hex_id": "89a81000004ffff",
+      "nome_area": "Santa Cecília",
+      "centro_x": 220,
+      "centro_y": 225,
+      "vizinhos": ["89a81000001ffff", "89a81000005ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 12,
+          "aberturas_24m": 5,
+          "baixas_24m": 6,
+          "taxa_fechamento": 0.36,
+          "densidade_segmento": 0.47,
+          "densidade_complementares": 0.58,
+          "idade_mediana_meses": 16,
+          "percentil_saturacao": 44,
+          "confianca_geografica": "alta"
+        },
+        "farmacias": {
+          "ativos": 6,
+          "aberturas_24m": 1,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.13,
+          "densidade_segmento": 0.22,
+          "densidade_complementares": 0.34,
+          "idade_mediana_meses": 47,
+          "percentil_saturacao": 37,
+          "confianca_geografica": "alta"
+        },
+        "academias": {
+          "ativos": 5,
+          "aberturas_24m": 2,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.15,
+          "densidade_segmento": 0.18,
+          "densidade_complementares": 0.27,
+          "idade_mediana_meses": 29,
+          "percentil_saturacao": 48,
+          "confianca_geografica": "alta"
+        }
+      }
+    },
+    {
+      "hex_id": "89a81000005ffff",
+      "nome_area": "Consolação Oeste",
+      "centro_x": 300,
+      "centro_y": 225,
+      "vizinhos": ["89a81000002ffff", "89a81000004ffff", "89a81000006ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 21,
+          "aberturas_24m": 7,
+          "baixas_24m": 2,
+          "taxa_fechamento": 0.09,
+          "densidade_segmento": 0.76,
+          "densidade_complementares": 0.8,
+          "idade_mediana_meses": 41,
+          "percentil_saturacao": 84,
+          "confianca_geografica": "alta"
+        },
+        "farmacias": {
+          "ativos": 9,
+          "aberturas_24m": 2,
+          "baixas_24m": 0,
+          "taxa_fechamento": 0.03,
+          "densidade_segmento": 0.31,
+          "densidade_complementares": 0.46,
+          "idade_mediana_meses": 73,
+          "percentil_saturacao": 64,
+          "confianca_geografica": "alta"
+        },
+        "academias": {
+          "ativos": 9,
+          "aberturas_24m": 4,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.1,
+          "densidade_segmento": 0.32,
+          "densidade_complementares": 0.42,
+          "idade_mediana_meses": 35,
+          "percentil_saturacao": 77,
+          "confianca_geografica": "alta"
+        }
+      }
+    },
+    {
+      "hex_id": "89a81000006ffff",
+      "nome_area": "Paulista Baixa",
+      "centro_x": 380,
+      "centro_y": 225,
+      "vizinhos": ["89a81000003ffff", "89a81000005ffff"],
+      "segmentos": {
+        "cafeterias": {
+          "ativos": 26,
+          "aberturas_24m": 12,
+          "baixas_24m": 5,
+          "taxa_fechamento": 0.18,
+          "densidade_segmento": 0.88,
+          "densidade_complementares": 0.83,
+          "idade_mediana_meses": 26,
+          "percentil_saturacao": 87,
+          "confianca_geografica": "alta"
+        },
+        "farmacias": {
+          "ativos": 12,
+          "aberturas_24m": 3,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.07,
+          "densidade_segmento": 0.43,
+          "densidade_complementares": 0.57,
+          "idade_mediana_meses": 66,
+          "percentil_saturacao": 82,
+          "confianca_geografica": "alta"
+        },
+        "academias": {
+          "ativos": 8,
+          "aberturas_24m": 3,
+          "baixas_24m": 1,
+          "taxa_fechamento": 0.12,
+          "densidade_segmento": 0.28,
+          "densidade_complementares": 0.39,
+          "idade_mediana_meses": 32,
+          "percentil_saturacao": 68,
+          "confianca_geografica": "alta"
+        }
+      }
+    }
+  ],
+  "detalhes_area": {
+    "89a81000001ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 2},
+        {"motivo": "Omissão contumaz", "quantidade": 1},
+        {"motivo": "Inaptidão cadastral", "quantidade": 1}
+      ],
+      "serie_aberturas": [2, 1, 3, 1, 2, 2],
+      "serie_baixas": [0, 1, 1, 0, 1, 1],
+      "observacao": "Área madura com bom suporte de fluxo e baixa concentração recente de falhas."
+    },
+    "89a81000002ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 3},
+        {"motivo": "Baixa por inatividade", "quantidade": 2},
+        {"motivo": "Omissão contumaz", "quantidade": 2}
+      ],
+      "serie_aberturas": [1, 2, 1, 2, 1, 2],
+      "serie_baixas": [1, 1, 0, 2, 1, 2],
+      "observacao": "Boa presença de demanda complementar, porém com histórico mais volátil e confiança geográfica média."
+    },
+    "89a81000003ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 2},
+        {"motivo": "Baixa por inatividade", "quantidade": 1}
+      ],
+      "serie_aberturas": [2, 3, 2, 1, 3, 3],
+      "serie_baixas": [0, 1, 1, 0, 0, 1],
+      "observacao": "Concentração elevada do segmento com sinais saudáveis de permanência."
+    },
+    "89a81000004ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 4},
+        {"motivo": "Baixa por inatividade", "quantidade": 1},
+        {"motivo": "Omissão contumaz", "quantidade": 1}
+      ],
+      "serie_aberturas": [0, 1, 1, 1, 1, 1],
+      "serie_baixas": [1, 1, 1, 0, 2, 1],
+      "observacao": "Região ainda interessante para exploração, mas com taxa de fechamento acima da média da cidade."
+    },
+    "89a81000005ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 1},
+        {"motivo": "Baixa por inatividade", "quantidade": 1}
+      ],
+      "serie_aberturas": [1, 1, 1, 2, 1, 1],
+      "serie_baixas": [0, 0, 0, 1, 1, 0],
+      "observacao": "Equilíbrio entre saturação e estabilidade, com bom ecossistema complementar."
+    },
+    "89a81000006ffff": {
+      "motivos_baixa": [
+        {"motivo": "Encerramento voluntário", "quantidade": 3},
+        {"motivo": "Baixa por inatividade", "quantidade": 1},
+        {"motivo": "Inaptidão cadastral", "quantidade": 1}
+      ],
+      "serie_aberturas": [2, 2, 3, 1, 2, 2],
+      "serie_baixas": [1, 0, 1, 1, 1, 1],
+      "observacao": "Área com alta densidade e tração recente, mas já bastante disputada."
+    }
+  },
+  "qualidade_dados": {
+    "snapshot_referencia": "2026-01",
+    "cobertura_geocodificacao": 0.87,
+    "confianca_alta": 0.71,
+    "confianca_media": 0.16,
+    "confianca_baixa": 0.13,
+    "enderecos_para_revisao": 381,
+    "arquivos_previstos": ["Empresas", "Estabelecimentos", "Simples", "CNAEs", "Motivos", "Municipios", "Naturezas"],
+    "arquivos_processados": ["Empresas", "Estabelecimentos", "Simples", "CNAEs", "Motivos", "Municipios", "Naturezas"]
+  }
+}
