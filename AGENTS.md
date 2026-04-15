@@ -18,7 +18,9 @@ No estado atual:
 - Todo o projeto deve permanecer em português brasileiro.
 - Toda mudança relevante deve atualizar a documentação correspondente no mesmo ciclo de trabalho.
 - Commits devem ser pequenos, focados e com mensagem clara em português.
+- Cada commit deve tratar uma única intenção de mudança.
 - Evitar commits genéricos como `initial commit`, `ajustes` ou `correções`.
+- Não misturar no mesmo commit mudanças de dados, docs, validação, infra ou frontend quando elas puderem ser entendidas separadamente.
 - Não manter localmente camadas pesadas do snapshot quando elas puderem ser recriadas no Colab.
 
 ## Como pensar sobre o repositório
@@ -114,6 +116,13 @@ Cada commit deve responder com clareza:
 - o que mudou
 - em qual parte do sistema
 - por que isso existe
+
+Antes de commitar, conferir:
+
+- se o diff inteiro conta uma história única
+- se há arquivos de temas diferentes que merecem commits separados
+- se a mensagem explica a intenção sem soar genérica
+- se a documentação da mudança foi junto no mesmo ciclo
 
 ## O que evitar
 

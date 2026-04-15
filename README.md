@@ -20,6 +20,7 @@ No momento, a cidade-alvo padrão do POC é `Praia Grande - SP`. Enquanto o prim
 - Idioma padrão do projeto: português brasileiro.
 - Custo baixo: Colab para processamento pesado e ambiente local para app e banco.
 - Documentação forte desde o início.
+- Histórico Git legível, com commits pequenos e separados por intenção.
 - Dados cadastrais do CNPJ como fonte principal no v1.
 - Transparência analítica acima de modelos opacos.
 
