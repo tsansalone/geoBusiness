@@ -75,10 +75,11 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 
 ## Modo de trabalho recomendado
 
-1. Usar os notebooks do Colab para ingestão, limpeza, geocodificação e agregações.
-2. Exportar artefatos compactos para consumo local.
-3. Carregar as tabelas analíticas no banco.
-4. Usar a API para servir métricas e a aplicação web para exploração.
+1. Manter localmente apenas o ZIP mensal original e os metadados leves do snapshot.
+2. Usar os notebooks do Colab para extração, ingestão, limpeza, geocodificação e agregações.
+3. Exportar artefatos compactos para consumo local.
+4. Carregar as tabelas analíticas no banco.
+5. Usar a API para servir métricas e a aplicação web para exploração.
 
 ## Documentação principal
 
@@ -100,6 +101,7 @@ Este scaffold entrega:
 - frontend em PT-BR com filtros, mapa hexagonal sintético e painéis analíticos
 - dados de exemplo coerentes entre API e web
 - contrato inicial da pipeline e amostras sintéticas do CNPJ
+- fluxo de Colab preparado para partir apenas do ZIP mensal original
 - documentação-base para evolução do projeto
 
 ## Fontes de referência

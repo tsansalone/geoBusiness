@@ -10,6 +10,19 @@ dados_brutos/cnpj/AAAA-MM/
 
 ## Estrutura interna
 
+### Estrutura mínima local
+
+Esta é a estrutura que preferimos manter no computador local:
+
+```text
+00_pacote_original/
+04_metadados/
+```
+
+### Estrutura de trabalho temporária
+
+Esta é a estrutura que os notebooks podem montar no Colab durante o processamento:
+
 ```text
 00_pacote_original/
 01_subarquivos_zip/
@@ -30,13 +43,14 @@ dados_brutos/cnpj/AAAA-MM/
 
 A pasta `01_subarquivos_zip` é útil durante a primeira extração do snapshot, mas não precisa ser mantida para sempre.
 
-Regra adotada:
+Regra adotada para o ambiente local:
 
 - manter `00_pacote_original`
-- manter `02_extraido_texto`
-- permitir a remoção de `01_subarquivos_zip` após validação da extração
+- manter `04_metadados`
+- não manter `02_extraido_texto` por padrão
+- não manter `01_subarquivos_zip` por padrão
 
-Isso reduz uso de disco sem perder reprodutibilidade, porque os ZIPs internos podem ser recriados a partir do pacote original.
+Isso reduz uso de disco sem perder reprodutibilidade, porque a árvore de trabalho pode ser recriada a partir do pacote original.
 
 ## Fluxo preferencial no Colab
 
@@ -44,7 +58,7 @@ Para reduzir uso de disco local, o fluxo preferencial do projeto passa a ser:
 
 - manter localmente apenas o ZIP mensal original
 - fazer upload desse ZIP para o Colab
-- deixar o próprio notebook gerar `00_pacote_original` e `02_extraido_texto` no disco temporário da instância
+- deixar o próprio notebook gerar a árvore de trabalho no disco temporário da instância
 - baixar de volta apenas os artefatos processados que forem necessários
 
 ## Famílias esperadas

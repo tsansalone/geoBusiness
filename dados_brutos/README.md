@@ -4,6 +4,25 @@ Esta pasta é ignorada pelo Git e deve armazenar snapshots reais do CNPJ sem alt
 
 ## Convenção
 
+O projeto trabalha com dois contextos diferentes:
+
+- estrutura mínima local, para economizar espaço no computador
+- estrutura completa temporária, montada no Colab durante o processamento
+
+### Estrutura mínima local
+
+```text
+dados_brutos/
+  cnpj/
+    AAAA-MM/
+      00_pacote_original/
+      04_metadados/
+```
+
+### Estrutura completa temporária
+
+Quando um notebook prepara o snapshot no Colab, a árvore de trabalho pode incluir:
+
 ```text
 dados_brutos/
   cnpj/
@@ -36,6 +55,8 @@ Esta camada é transitória. No fluxo preferencial do Colab, ela pode existir ap
 ### `02_extraido_texto`
 
 Arquivos efetivamente extraídos dos ZIPs internos, ainda no padrão bruto da Receita.
+
+No fluxo atual, essa camada deve existir preferencialmente apenas no disco temporário do Colab.
 
 ### `03_processado`
 
