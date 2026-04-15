@@ -10,11 +10,11 @@ Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e
 ## Uso recomendado
 
 1. Abrir no Google Colab.
-2. Fazer upload apenas do ZIP mensal original para `/content/uploads/`.
-3. Deixar que o próprio notebook prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
+2. Montar o Google Drive e manter nele apenas o ZIP mensal original.
+3. Deixar que o próprio notebook copie esse ZIP para `/content` e prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
 5. Produzir recortes processados para a cidade-alvo e evoluir as saídas em `processado/recorte`, `processado/preparado` e `processado/analitico`.
 
 ## Observação
 
-Os notebooks foram escritos em PT-BR e assumem um fluxo de trabalho temporário em `/content`, sem exigir que as camadas extraídas sejam mantidas no seu computador.
+Os notebooks foram escritos em PT-BR e assumem um fluxo de trabalho com ZIP bruto no Google Drive e processamento temporário em `/content`, sem exigir que as camadas extraídas sejam mantidas no seu computador.

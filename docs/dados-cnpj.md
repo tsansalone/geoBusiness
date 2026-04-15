@@ -62,8 +62,8 @@ Isso reduz uso de disco sem perder reprodutibilidade, porque a árvore de trabal
 
 Para reduzir uso de disco local, o fluxo preferencial do projeto passa a ser:
 
-- manter localmente apenas o ZIP mensal original
-- fazer upload desse ZIP para o Colab
+- manter no Google Drive apenas o ZIP mensal original
+- montar o Drive no Colab e copiar para `/content` apenas o ZIP do snapshot alvo
 - deixar o próprio notebook gerar a árvore de trabalho no disco temporário da instância
 - baixar de volta apenas os artefatos processados que forem necessários
 

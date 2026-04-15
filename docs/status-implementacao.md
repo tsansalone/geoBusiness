@@ -16,6 +16,7 @@ Concluído:
 - estrutura padrão para snapshots do CNPJ
 - organização do snapshot `2026-04`
 - política de retenção local para manter apenas ZIP original e metadados leves
+- fluxo do Colab ajustado para usar o Google Drive como origem do ZIP bruto e `/content` como área de processamento
 - nomenclatura de pastas simplificada para `original`, `extraido`, `processado` e `metadados`
 - nomenclatura das camadas processadas padronizada para `recorte`, `preparado` e `analitico`
 - notebooks ajustados para partir do ZIP original no Colab

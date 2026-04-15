@@ -9,6 +9,11 @@ O projeto trabalha com dois contextos diferentes:
 - estrutura mínima local, para economizar espaço no computador
 - estrutura completa temporária, montada no Colab durante o processamento
 
+Observação:
+
+- no fluxo atual, o local preferencial para guardar o ZIP bruto do snapshot é o Google Drive
+- esta pasta local existe apenas como apoio quando for necessário manter metadados leves ou uma cópia controlada do pacote original
+
 ### Estrutura mínima local
 
 ```text
@@ -76,4 +81,4 @@ Manifestos, checksums, observações e resultados de validação do snapshot.
 - Não editar arquivos de origem manualmente.
 - Preferir artefatos derivados em `processado`.
 - Registrar toda observação importante em `metadados`.
-- Quando houver limitação de espaço local, preferir armazenar apenas o ZIP mensal original e deixar a extração para o ambiente temporário do Colab.
+- Quando houver limitação de espaço local, preferir armazenar o ZIP mensal original no Google Drive e deixar a extração para o ambiente temporário do Colab.

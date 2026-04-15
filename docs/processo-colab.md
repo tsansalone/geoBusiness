@@ -4,19 +4,21 @@
 
 Usar o Colab como ambiente barato para etapas de processamento pesado antes de servir os dados localmente.
 
-O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original e usar o disco temporário da instância Colab para extração e processamento.
+O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal original e usar o disco temporário da instância Colab para extração e processamento.
 
 ## Fluxo sugerido
 
-1. Fazer upload do ZIP mensal original para o disco local da instância Colab.
-2. Executar o notebook para mover o ZIP para `original` e extrair os arquivos para `extraido`.
-3. Ler os arquivos texto com separador `;`.
-4. Validar colunas esperadas com base no contrato do projeto.
-5. Filtrar a cidade-alvo.
-6. Geocodificar endereços conforme a estratégia escolhida.
-7. Gerar agregações por H3.
-8. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
-9. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
+1. Salvar o ZIP mensal original no Google Drive.
+2. Montar o Drive no Colab.
+3. Copiar apenas o ZIP do snapshot alvo para o disco local da instância.
+4. Executar o notebook para mover o ZIP para `original` e extrair os arquivos para `extraido`.
+5. Ler os arquivos texto com separador `;`.
+6. Validar colunas esperadas com base no contrato do projeto.
+7. Filtrar a cidade-alvo.
+8. Geocodificar endereços conforme a estratégia escolhida.
+9. Gerar agregações por H3.
+10. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
+11. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
 
 ## Boas práticas
 
@@ -24,7 +26,8 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 - Salvar checkpoints intermediários.
 - Registrar versão do notebook e parâmetros usados.
 - Não commitar snapshots brutos grandes no Git.
-- Preferir o disco local da instância (`/content`) em vez de ocupar espaço no Google Drive.
+- Usar o Google Drive apenas como armazenamento do ZIP bruto.
+- Preferir o disco local da instância (`/content`) para todas as etapas temporárias de extração e processamento.
 - Evitar manter `extraido` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados

@@ -6,11 +6,13 @@ Garantir que cada snapshot mensal siga sempre o mesmo fluxo operacional, sem dec
 
 ## Fluxo padrão
 
-1. Salvar o pacote original em `original/`.
-2. Extrair o conteúdo textual para `extraido/`.
-3. Validar estrutura, famílias e amostras.
-4. Registrar manifesto em `metadados/`.
-5. Só então iniciar o processamento em `processado/`.
+1. Salvar o pacote original no Google Drive.
+2. Copiar o ZIP do snapshot alvo para o disco local da instância Colab.
+3. Salvar o pacote original em `original/`.
+4. Extrair o conteúdo textual para `extraido/`.
+5. Validar estrutura, famílias e amostras.
+6. Registrar manifesto em `metadados/`.
+7. Só então iniciar o processamento em `processado/`.
 
 Observação:
 Em fluxos automáticos no Colab, os ZIPs internos podem existir apenas em pasta temporária e ser removidos no mesmo notebook.

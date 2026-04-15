@@ -47,7 +47,7 @@ Responsável pelo contrato dos snapshots, inspeção, geração de manifesto e r
 
 Pasta: `notebooks/`
 
-Responsável pelo fluxo prático no Colab. O padrão atual é partir apenas do ZIP mensal original.
+Responsável pelo fluxo prático no Colab. O padrão atual é manter apenas o ZIP mensal original no Google Drive e copiar esse arquivo para o disco local da instância antes do processamento.
 
 ### Documentação
 
@@ -72,11 +72,12 @@ Essas camadas podem ser recriadas no disco temporário do Colab.
 
 ## Fluxo padrão no Colab
 
-1. Fazer upload apenas do ZIP mensal original para `/content/uploads/`.
-2. Deixar o notebook preparar o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
-3. Validar famílias e amostras.
-4. Gerar o recorte do município-alvo.
-5. Exportar apenas os artefatos processados necessários.
+1. Manter o ZIP mensal original no Google Drive, em pasta versionada por snapshot.
+2. Montar o Drive no Colab e copiar apenas o ZIP necessário para `/content`.
+3. Deixar o notebook preparar o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
+4. Validar famílias e amostras.
+5. Gerar o recorte do município-alvo.
+6. Baixar apenas os artefatos processados necessários ao final da execução.
 
 ## Quando alterar documentação
 
