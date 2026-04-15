@@ -4,17 +4,19 @@
 
 Usar o Colab como ambiente barato para etapas de processamento pesado antes de servir os dados localmente.
 
+O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original e usar o disco temporário da instância Colab para extração e processamento.
+
 ## Fluxo sugerido
 
-1. Fazer upload do snapshot mensal para o disco local da instância Colab.
-2. Organizar ou extrair o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
-3. Ler os arquivos `.zip` e `.csv` com separador `;`.
+1. Fazer upload do ZIP mensal original para o disco local da instância Colab.
+2. Executar o notebook para mover o ZIP para `00_pacote_original` e extrair os arquivos para `02_extraido_texto`.
+3. Ler os arquivos texto com separador `;`.
 4. Validar colunas esperadas com base no contrato do projeto.
 5. Filtrar a cidade-alvo.
 6. Geocodificar endereços conforme a estratégia escolhida.
 7. Gerar agregações por H3.
 8. Exportar artefatos compactos para `parquet` ou `csv`.
-9. Baixar os artefatos gerados ou transferi-los para o ambiente local do projeto.
+9. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
 
 ## Boas práticas
 
@@ -23,6 +25,7 @@ Usar o Colab como ambiente barato para etapas de processamento pesado antes de s
 - Registrar versão do notebook e parâmetros usados.
 - Não commitar snapshots brutos grandes no Git.
 - Preferir o disco local da instância (`/content`) em vez de ocupar espaço no Google Drive.
+- Evitar manter `02_extraido_texto` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados
 

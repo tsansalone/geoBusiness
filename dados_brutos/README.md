@@ -31,7 +31,7 @@ ZIPs internos organizados por família:
 - `simples`
 - `dominios`
 
-Esta camada é transitória. Depois que `02_extraido_texto/` estiver validada, a pasta pode ser removida para economizar espaço, pois o pacote original continua preservado em `00_pacote_original/`.
+Esta camada é transitória. No fluxo preferencial do Colab, ela pode existir apenas em pasta temporária durante a extração e ser removida no mesmo notebook. Se for criada localmente, pode ser removida depois que `02_extraido_texto/` estiver validada, pois o pacote original continua preservado em `00_pacote_original/`.
 
 ### `02_extraido_texto`
 
@@ -55,3 +55,4 @@ Manifestos, checksums, observações e resultados de validação do snapshot.
 - Não editar arquivos de origem manualmente.
 - Preferir artefatos derivados em `03_processado`.
 - Registrar toda observação importante em `04_metadados`.
+- Quando houver limitação de espaço local, preferir armazenar apenas o ZIP mensal original e deixar a extração para o ambiente temporário do Colab.

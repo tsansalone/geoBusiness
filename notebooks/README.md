@@ -1,6 +1,6 @@
 # Notebooks do projeto
 
-Os notebooks desta pasta servem como ponte entre o snapshot bruto do CNPJ e os artefatos usados pelo POC.
+Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e os artefatos usados pelo POC.
 
 ## Notebooks incluídos
 
@@ -10,11 +10,11 @@ Os notebooks desta pasta servem como ponte entre o snapshot bruto do CNPJ e os a
 ## Uso recomendado
 
 1. Abrir no Google Colab.
-2. Fazer upload do snapshot para o disco local da instância.
-3. Organizar os arquivos em `/content/dados_brutos/cnpj/AAAA-MM/`.
+2. Fazer upload apenas do ZIP mensal original para `/content/uploads/`.
+3. Deixar que o próprio notebook prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
 5. Produzir recortes processados para a cidade-alvo.
 
 ## Observação
 
-Os notebooks foram escritos em PT-BR e assumem o padrão de pastas definido em [docs/dados-cnpj.md](/C:/Users/Thiago/geoBusiness/docs/dados-cnpj.md).
+Os notebooks foram escritos em PT-BR e assumem um fluxo de trabalho temporário em `/content`, sem exigir que as camadas extraídas sejam mantidas no seu computador.

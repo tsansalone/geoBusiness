@@ -38,6 +38,15 @@ Regra adotada:
 
 Isso reduz uso de disco sem perder reprodutibilidade, porque os ZIPs internos podem ser recriados a partir do pacote original.
 
+## Fluxo preferencial no Colab
+
+Para reduzir uso de disco local, o fluxo preferencial do projeto passa a ser:
+
+- manter localmente apenas o ZIP mensal original
+- fazer upload desse ZIP para o Colab
+- deixar o próprio notebook gerar `00_pacote_original` e `02_extraido_texto` no disco temporário da instância
+- baixar de volta apenas os artefatos processados que forem necessários
+
 ## Famílias esperadas
 
 ### Principais para o POC
