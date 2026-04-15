@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  banco:
+    image: postgis/postgis:16-3.4
+    container_name: geobusiness-postgis
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-geobusiness}
+      POSTGRES_USER: ${POSTGRES_USER:-geobusiness}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-geobusiness}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_geobusiness:/var/lib/postgresql/data
+
+volumes:
+  postgres_geobusiness:
