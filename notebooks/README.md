@@ -10,8 +10,8 @@ Os notebooks desta pasta servem como ponte entre o snapshot bruto do CNPJ e os a
 ## Uso recomendado
 
 1. Abrir no Google Colab.
-2. Montar o Google Drive ou ajustar a raiz dos dados.
-3. Apontar para `dados_brutos/cnpj/AAAA-MM/`.
+2. Fazer upload do snapshot para o disco local da instância.
+3. Organizar os arquivos em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
 5. Produzir recortes processados para a cidade-alvo.
 

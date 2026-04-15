@@ -29,7 +29,7 @@ def test_rota_area():
     resposta = client.get("/areas/89a81000003ffff", params={"segmento": "cafeterias"})
     assert resposta.status_code == 200
     corpo = resposta.json()
-    assert corpo["nome_area"] == "Bela Vista Leste"
+    assert corpo["nome_area"] == "Guilhermina"
     assert corpo["metricas"]["ativos"] == 29
 
 
@@ -53,7 +53,7 @@ def test_rota_ingestao():
         "/ingestao/snapshot-cnpj",
         json={
             "snapshot_mes": "2026-02",
-            "cidade": "São Paulo - SP",
+            "cidade": "Praia Grande - SP",
             "origem_arquivos": "drive://cnpj/2026-02"
         }
     )

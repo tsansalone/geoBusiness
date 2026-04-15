@@ -1,7 +1,7 @@
 {
   "cidade": {
-    "id": "3550308",
-    "nome": "São Paulo - SP",
+    "id": "6921",
+    "nome": "Praia Grande - SP",
     "fonte": "base_sintetica_poc"
   },
   "segmentos": [
@@ -34,7 +34,7 @@
   "hexagonos": [
     {
       "hex_id": "89a81000001ffff",
-      "nome_area": "República Norte",
+      "nome_area": "Canto do Forte",
       "centro_x": 180,
       "centro_y": 140,
       "vizinhos": ["89a81000002ffff", "89a81000004ffff"],
@@ -76,7 +76,7 @@
     },
     {
       "hex_id": "89a81000002ffff",
-      "nome_area": "República Sul",
+      "nome_area": "Boqueirão",
       "centro_x": 260,
       "centro_y": 140,
       "vizinhos": ["89a81000001ffff", "89a81000003ffff", "89a81000005ffff"],
@@ -118,7 +118,7 @@
     },
     {
       "hex_id": "89a81000003ffff",
-      "nome_area": "Bela Vista Leste",
+      "nome_area": "Guilhermina",
       "centro_x": 340,
       "centro_y": 140,
       "vizinhos": ["89a81000002ffff", "89a81000006ffff"],
@@ -160,7 +160,7 @@
     },
     {
       "hex_id": "89a81000004ffff",
-      "nome_area": "Santa Cecília",
+      "nome_area": "Aviação",
       "centro_x": 220,
       "centro_y": 225,
       "vizinhos": ["89a81000001ffff", "89a81000005ffff"],
@@ -202,7 +202,7 @@
     },
     {
       "hex_id": "89a81000005ffff",
-      "nome_area": "Consolação Oeste",
+      "nome_area": "Tupi",
       "centro_x": 300,
       "centro_y": 225,
       "vizinhos": ["89a81000002ffff", "89a81000004ffff", "89a81000006ffff"],
@@ -244,7 +244,7 @@
     },
     {
       "hex_id": "89a81000006ffff",
-      "nome_area": "Paulista Baixa",
+      "nome_area": "Ocian",
       "centro_x": 380,
       "centro_y": 225,
       "vizinhos": ["89a81000003ffff", "89a81000005ffff"],

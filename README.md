@@ -13,6 +13,8 @@ O projeto foi estruturado para ajudar analistas a responder perguntas como:
 
 O foco do v1 é uma aplicação analítica explicável, barata de desenvolver e pronta para crescer quando os snapshots reais do CNPJ estiverem disponíveis.
 
+No momento, a cidade-alvo padrão do POC é `Praia Grande - SP`. Enquanto o primeiro recorte real ainda não foi processado ponta a ponta, a API e a interface continuam usando uma base analítica sintética para prototipação.
+
 ## Princípios do repositório
 
 - Idioma padrão do projeto: português brasileiro.

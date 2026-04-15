@@ -23,6 +23,7 @@ Em andamento:
 
 - notebooks do Colab para inspeção e recorte
 - integração entre artefatos processados e API
+- cidade-alvo padrão ajustada para `Praia Grande - SP` com código de município `6921`
 
 ## Backend
 

@@ -1,6 +1,6 @@
 import type { DetalheArea, Hexagono, QualidadeDados, Segmento } from "../tipos/geobusiness";
 
-export const cidadePadrao = "São Paulo - SP";
+export const cidadePadrao = "Praia Grande - SP";
 
 export const segmentos: Segmento[] = [
   {
@@ -26,7 +26,7 @@ export const segmentos: Segmento[] = [
 export const hexagonos: Hexagono[] = [
   {
     hexId: "89a81000001ffff",
-    nomeArea: "República Norte",
+    nomeArea: "Canto do Forte",
     centroX: 180,
     centroY: 140,
     vizinhos: ["89a81000002ffff", "89a81000004ffff"],
@@ -38,7 +38,7 @@ export const hexagonos: Hexagono[] = [
   },
   {
     hexId: "89a81000002ffff",
-    nomeArea: "República Sul",
+    nomeArea: "Boqueirão",
     centroX: 260,
     centroY: 140,
     vizinhos: ["89a81000001ffff", "89a81000003ffff", "89a81000005ffff"],
@@ -50,7 +50,7 @@ export const hexagonos: Hexagono[] = [
   },
   {
     hexId: "89a81000003ffff",
-    nomeArea: "Bela Vista Leste",
+    nomeArea: "Guilhermina",
     centroX: 340,
     centroY: 140,
     vizinhos: ["89a81000002ffff", "89a81000006ffff"],
@@ -62,7 +62,7 @@ export const hexagonos: Hexagono[] = [
   },
   {
     hexId: "89a81000004ffff",
-    nomeArea: "Santa Cecília",
+    nomeArea: "Aviação",
     centroX: 220,
     centroY: 225,
     vizinhos: ["89a81000001ffff", "89a81000005ffff"],
@@ -74,7 +74,7 @@ export const hexagonos: Hexagono[] = [
   },
   {
     hexId: "89a81000005ffff",
-    nomeArea: "Consolação Oeste",
+    nomeArea: "Tupi",
     centroX: 300,
     centroY: 225,
     vizinhos: ["89a81000002ffff", "89a81000004ffff", "89a81000006ffff"],
@@ -86,7 +86,7 @@ export const hexagonos: Hexagono[] = [
   },
   {
     hexId: "89a81000006ffff",
-    nomeArea: "Paulista Baixa",
+    nomeArea: "Ocian",
     centroX: 380,
     centroY: 225,
     vizinhos: ["89a81000003ffff", "89a81000005ffff"],
