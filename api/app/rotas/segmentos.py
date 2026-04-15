@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from app.esquemas.modelos import Segmento
-from app.servicos.repositorio_exemplo import listar_segmentos
+from app.servicos.repositorio_dados import listar_segmentos
 
 router = APIRouter(prefix="/segmentos", tags=["segmentos"])
 

@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException, Query
 
 from app.esquemas.modelos import MotivoBaixa, RespostaArea, SerieTemporal
-from app.servicos.repositorio_exemplo import (
+from app.servicos.repositorio_dados import (
     obter_detalhe_area,
+    obter_fonte_dados,
     obter_hexagono,
     obter_segmento,
 )
@@ -27,6 +28,7 @@ def obter_area(
         hex_id=hexagono["hex_id"],
         nome_area=hexagono["nome_area"],
         segmento_id=segmento_obj["id"],
+        fonte_dados=obter_fonte_dados(),
         metricas=metricas,
         series=[
             SerieTemporal(nome="aberturas", valores=detalhe["serie_aberturas"]),

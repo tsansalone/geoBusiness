@@ -22,6 +22,7 @@ def test_rota_mapa():
     assert resposta.status_code == 200
     corpo = resposta.json()
     assert corpo["segmento_id"] == "cafeterias"
+    assert corpo["fonte_dados"] in {"real", "sintetica"}
     assert len(corpo["hexagonos"]) == 6
 
 
@@ -30,6 +31,7 @@ def test_rota_area():
     assert resposta.status_code == 200
     corpo = resposta.json()
     assert corpo["nome_area"] == "Guilhermina"
+    assert corpo["fonte_dados"] in {"real", "sintetica"}
     assert corpo["metricas"]["ativos"] == 29
 
 
@@ -39,13 +41,15 @@ def test_rota_comparacao():
         params={"hex_ids": "89a81000003ffff,89a81000005ffff", "segmento": "cafeterias"}
     )
     assert resposta.status_code == 200
+    assert resposta.json()["fonte_dados"] in {"real", "sintetica"}
     assert len(resposta.json()["areas"]) == 2
 
 
 def test_rota_qualidade():
     resposta = client.get("/qualidade-dados")
     assert resposta.status_code == 200
-    assert resposta.json()["snapshot_referencia"] == "2026-01"
+    assert resposta.json()["snapshot_referencia"] in {"2026-01", "2026-04"}
+    assert resposta.json()["fonte_dados"] in {"real", "sintetica"}
 
 
 def test_rota_ingestao():

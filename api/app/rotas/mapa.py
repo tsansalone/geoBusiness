@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 
 from app.esquemas.modelos import HexagonoMetrico, RespostaMapa
-from app.servicos.repositorio_exemplo import obter_cidade, obter_segmento, listar_hexagonos
+from app.servicos.repositorio_dados import obter_cidade, obter_fonte_dados, obter_segmento, listar_hexagonos
 
 router = APIRouter(prefix="/mapa", tags=["mapa"])
 
@@ -36,8 +36,15 @@ def obter_metricas_hex(
                 confianca_geografica=str(recorte["confianca_geografica"]),
                 resumo={
                     "ativos": recorte["ativos"],
+                    "baixadas_atuais": recorte.get("baixadas_atuais", 0),
+                    "aberturas_24m": recorte["aberturas_24m"],
                     "baixas_24m": recorte["baixas_24m"],
-                    "taxa_fechamento": recorte["taxa_fechamento"]
+                    "taxa_fechamento": recorte["taxa_fechamento"],
+                    "densidade_segmento": recorte["densidade_segmento"],
+                    "densidade_complementares": recorte["densidade_complementares"],
+                    "idade_mediana_meses": recorte["idade_mediana_meses"],
+                    "percentil_saturacao": recorte["percentil_saturacao"],
+                    "confianca_geografica": recorte["confianca_geografica"],
                 }
             )
         )
@@ -50,5 +57,6 @@ def obter_metricas_hex(
         metrica=metrica,
         media_cidade=round(media, 2),
         maior_valor=max(valores),
+        fonte_dados=obter_fonte_dados(),
         hexagonos=hexagonos_convertidos
     )

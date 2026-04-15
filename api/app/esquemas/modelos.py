@@ -26,6 +26,7 @@ class RespostaMapa(BaseModel):
     metrica: str
     media_cidade: float
     maior_valor: float
+    fonte_dados: str
     hexagonos: List[HexagonoMetrico]
 
 
@@ -43,6 +44,7 @@ class RespostaArea(BaseModel):
     hex_id: str
     nome_area: str
     segmento_id: str
+    fonte_dados: str
     metricas: dict[str, float | int | str]
     series: List[SerieTemporal]
     motivos_baixa: List[MotivoBaixa]
@@ -65,11 +67,13 @@ class ItemComparacao(BaseModel):
 class RespostaComparacao(BaseModel):
     cidade: str
     segmento_id: str
+    fonte_dados: str
     areas: List[ItemComparacao]
 
 
 class RespostaQualidade(BaseModel):
     snapshot_referencia: str
+    fonte_dados: str
     cobertura_geocodificacao: float
     confianca_alta: float
     confianca_media: float

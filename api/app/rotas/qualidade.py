@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from app.esquemas.modelos import RespostaQualidade
-from app.servicos.repositorio_exemplo import obter_qualidade_dados
+from app.servicos.repositorio_dados import obter_qualidade_dados
 
 router = APIRouter(prefix="/qualidade-dados", tags=["qualidade"])
 

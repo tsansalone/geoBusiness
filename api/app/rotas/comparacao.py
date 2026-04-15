@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 
 from app.esquemas.modelos import ItemComparacao, RespostaComparacao
-from app.servicos.repositorio_exemplo import obter_cidade, obter_hexagono, obter_segmento
+from app.servicos.repositorio_dados import obter_cidade, obter_fonte_dados, obter_hexagono, obter_segmento
 
 router = APIRouter(prefix="/comparar", tags=["comparacao"])
 
@@ -38,4 +38,9 @@ def comparar_areas(
             )
         )
 
-    return RespostaComparacao(cidade=obter_cidade(), segmento_id=segmento_obj["id"], areas=itens)
+    return RespostaComparacao(
+        cidade=obter_cidade(),
+        segmento_id=segmento_obj["id"],
+        fonte_dados=obter_fonte_dados(),
+        areas=itens
+    )
