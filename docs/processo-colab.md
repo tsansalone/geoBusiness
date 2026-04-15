@@ -15,10 +15,13 @@ O fluxo recomendado passa a ser: manter no Google Drive apenas o ZIP mensal orig
 5. Ler os arquivos texto com separador `;`.
 6. Validar colunas esperadas com base no contrato do projeto.
 7. Filtrar a cidade-alvo.
-8. Geocodificar endereços conforme a estratégia escolhida.
-9. Gerar agregações por H3.
-10. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
-11. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
+8. No `03`, preparar a estrutura em `/content/dados_brutos/cnpj/AAAA-MM/processado/recorte/` e subir os `.parquet` do recorte quando essa etapa começar a partir de arquivos já baixados.
+9. No `04`, preparar a estrutura em `/content/dados_brutos/cnpj/AAAA-MM/processado/preparado/` e subir os artefatos do `03` quando essa etapa começar a partir de arquivos já baixados.
+10. Persistir cache e estado da geocodificação no Google Drive para permitir retomada segura após reconexões.
+11. Gerar geocodificação em lotes curtos e classificar confiança espacial.
+12. Gerar agregações por H3.
+13. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
+14. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
 
 Sequência atual recomendada:
 
@@ -38,6 +41,7 @@ Sequência atual recomendada:
 - Preferir o disco local da instância (`/content`) para todas as etapas temporárias de extração e processamento.
 - Em recortes municipais, processar uma família por vez e persistir partes em disco para reduzir uso de RAM.
 - Reaproveitar cache local de geocodificação durante a sessão sempre que possível.
+- No `04`, preferir cache e estado persistentes no Google Drive quando a execução puder levar mais de uma sessão.
 - Evitar manter `extraido` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados
