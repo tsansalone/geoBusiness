@@ -36,8 +36,14 @@ metadados/
 - `original` preserva a origem exata do download.
 - `subarquivos_zip` organiza os ZIPs internos da Receita por família.
 - `extraido` contém os arquivos brutos realmente lidos pela pipeline.
-- `processado` concentra saídas derivadas do projeto.
+- `processado` concentra saídas derivadas do projeto, organizadas em `recorte`, `preparado` e `analitico`.
 - `metadados` registra validação, manifesto e observações.
+
+Dentro de `processado/`, o projeto usa:
+
+- `recorte` para o primeiro recorte persistido do snapshot
+- `preparado` para tabelas tratadas e enriquecidas
+- `analitico` para artefatos prontos para consumo da API e da interface
 
 ## Retenção da camada intermediária
 

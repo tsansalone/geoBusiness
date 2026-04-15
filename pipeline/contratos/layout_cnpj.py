@@ -22,6 +22,12 @@ SNAPSHOT_PARTES_OBRIGATORIAS = (
 
 SNAPSHOT_PARTES_TRANSITORIAS = ("subarquivos_zip",)
 
+CAMADAS_PROCESSAMENTO = (
+    "recorte",
+    "preparado",
+    "analitico",
+)
+
 
 @dataclass(frozen=True)
 class FamiliaArquivo:

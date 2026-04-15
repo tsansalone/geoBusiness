@@ -58,6 +58,6 @@ Limitação do ambiente atual:
 ## Próximos passos recomendados
 
 - adicionar um teste de contrato para os notebooks
-- validar a leitura do primeiro recorte real em `bronze`
-- adicionar testes de transformação `bronze -> silver -> gold`
+- validar a leitura do primeiro recorte real em `processado/recorte`
+- adicionar testes de transformação `recorte -> preparado -> analitico`
 - atualizar `next` para uma versão corrigida de segurança antes de endurecer a esteira de CI

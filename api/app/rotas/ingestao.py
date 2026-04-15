@@ -10,6 +10,6 @@ def registrar_snapshot(requisicao: RequisicaoSnapshot) -> RespostaIngestao:
     return RespostaIngestao(
         status="registrado",
         mensagem="Snapshot recebido para processamento assíncrono na pipeline.",
-        proximo_passo="Executar notebook ou job da camada bronze para carregar o snapshot informado.",
+        proximo_passo="Executar notebook ou job da etapa de recorte para carregar o snapshot informado.",
         snapshot_mes=requisicao.snapshot_mes
     )

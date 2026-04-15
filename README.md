@@ -78,7 +78,7 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 
 1. Manter localmente apenas o ZIP mensal original e os metadados leves do snapshot.
 2. Usar os notebooks do Colab para extração, ingestão, limpeza, geocodificação e agregações.
-3. Exportar artefatos compactos para consumo local.
+3. Exportar artefatos compactos para consumo local, organizados em `recorte`, `preparado` e `analitico` quando aplicável.
 4. Carregar as tabelas analíticas no banco.
 5. Usar a API para servir métricas e a aplicação web para exploração.
 

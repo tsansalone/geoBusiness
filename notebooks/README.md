@@ -13,7 +13,7 @@ Os notebooks desta pasta servem como ponte entre o ZIP mensal original do CNPJ e
 2. Fazer upload apenas do ZIP mensal original para `/content/uploads/`.
 3. Deixar que o próprio notebook prepare o snapshot em `/content/dados_brutos/cnpj/AAAA-MM/`.
 4. Validar famílias, amostras e colunas.
-5. Produzir recortes processados para a cidade-alvo.
+5. Produzir recortes processados para a cidade-alvo e evoluir as saídas em `processado/recorte`, `processado/preparado` e `processado/analitico`.
 
 ## Observação
 

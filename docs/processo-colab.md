@@ -15,7 +15,7 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 5. Filtrar a cidade-alvo.
 6. Geocodificar endereços conforme a estratégia escolhida.
 7. Gerar agregações por H3.
-8. Exportar artefatos compactos para `parquet` ou `csv`.
+8. Exportar artefatos compactos para `parquet` ou `csv`, mantendo a organização em `processado/recorte`, `processado/preparado` e `processado/analitico`.
 9. Baixar apenas os artefatos derivados que precisarem voltar para o ambiente local.
 
 ## Boas práticas
@@ -29,10 +29,11 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 
 ## Artefatos esperados
 
-- `silver_estabelecimentos.parquet`
-- `silver_empresas.parquet`
-- `gold_hex_segmento_mes.parquet`
-- `qualidade_geocodificacao.csv`
+- `processado/recorte/estabelecimentos_municipio.parquet`
+- `processado/recorte/empresas_municipio.parquet`
+- `processado/preparado/estabelecimentos_preparados.parquet`
+- `processado/analitico/hex_segmento_mes.parquet`
+- `processado/analitico/qualidade_geocodificacao.csv`
 
 ## Materiais incluídos
 

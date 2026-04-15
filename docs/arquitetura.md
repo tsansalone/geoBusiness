@@ -32,17 +32,21 @@ O ambiente local é usado para:
 
 ## Camadas de dados
 
-### Bronze
+### Dados de origem
 
-Arquivos brutos, imutáveis e versionados por `snapshot_mes`.
+Arquivos preservados em `original/` e `extraido/`, ainda próximos da publicação da Receita e versionados por `snapshot_mes`.
 
-### Silver
+### Recorte
 
-Tabelas normalizadas e enriquecidas, já com chaves consistentes, domínios resolvidos e trilha de qualidade.
+Primeiro conjunto de artefatos persistidos em `processado/recorte`, normalmente já limitado à cidade-alvo ou ao recorte operacional do projeto.
 
-### Gold
+### Preparado
 
-Tabelas analíticas prontas para consumo da API, normalmente agregadas por:
+Tabelas tratadas em `processado/preparado`, já com chaves consistentes, domínios resolvidos e trilha de qualidade.
+
+### Analitico
+
+Tabelas analíticas em `processado/analitico`, prontas para consumo da API, normalmente agregadas por:
 
 - cidade
 - hexágono H3

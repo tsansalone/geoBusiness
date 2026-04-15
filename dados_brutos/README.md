@@ -62,9 +62,9 @@ No fluxo atual, essa camada deve existir preferencialmente apenas no disco tempo
 
 Saídas operacionais da pipeline:
 
-- `bronze`
-- `silver`
-- `gold`
+- `recorte`: primeiro recorte persistido do snapshot, ainda próximo da estrutura original e já limitado ao escopo de trabalho do projeto
+- `preparado`: tabelas tratadas, com chaves consistentes, domínios resolvidos e trilha de qualidade
+- `analitico`: artefatos prontos para consumo da API e da interface, normalmente já agregados para leitura do produto
 
 ### `metadados`
 

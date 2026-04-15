@@ -17,6 +17,7 @@ Concluído:
 - organização do snapshot `2026-04`
 - política de retenção local para manter apenas ZIP original e metadados leves
 - nomenclatura de pastas simplificada para `original`, `extraido`, `processado` e `metadados`
+- nomenclatura das camadas processadas padronizada para `recorte`, `preparado` e `analitico`
 - notebooks ajustados para partir do ZIP original no Colab
 - contrato inicial do layout CNPJ
 - scripts de inspeção, manifesto e recorte
