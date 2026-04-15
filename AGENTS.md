@@ -23,6 +23,16 @@ No estado atual:
 - Não misturar no mesmo commit mudanças de dados, docs, validação, infra ou frontend quando elas puderem ser entendidas separadamente.
 - Não manter localmente camadas pesadas do snapshot quando elas puderem ser recriadas no Colab.
 
+## Padrão de delegação
+
+Para reduzir degradação de contexto e manter a revisão forte:
+
+- o agente principal deve delegar por padrão tarefas de implementação, exploração ou ajuste em áreas bem delimitadas do repositório
+- a responsabilidade principal fica em coordenar, revisar, integrar e validar se o pedido foi executado corretamente
+- tarefas pequenas, muito acopladas ao passo anterior ou claramente mais rápidas de resolver localmente podem ser feitas sem delegação
+- sempre que houver delegação, o resultado precisa ser revisado antes de virar commit
+- esse padrão é preferencial e contínuo para este repositório
+
 ## Como pensar sobre o repositório
 
 ### Backend
