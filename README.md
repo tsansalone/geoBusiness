@@ -92,6 +92,7 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 - [Qualidade dos dados](</C:/Users/Thiago/geoBusiness/docs/qualidade-dos-dados.md>)
 - [Status da implementação](</C:/Users/Thiago/geoBusiness/docs/status-implementacao.md>)
 - [Decisões arquiteturais](</C:/Users/Thiago/geoBusiness/docs/decisoes>)
+- [Guia para agentes e desenvolvedores](</C:/Users/Thiago/geoBusiness/AGENTS.md>)
 
 ## Situação atual do POC
 

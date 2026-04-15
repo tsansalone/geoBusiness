@@ -36,5 +36,6 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 
 ## Materiais incluídos
 
-- [notebooks/geo_business_poc_colab.ipynb](</C:/Users/Thiago/geoBusiness/notebooks/geo_business_poc_colab.ipynb>)
+- [notebooks/01_inspecao_snapshot_cnpj.ipynb](</C:/Users/Thiago/geoBusiness/notebooks/01_inspecao_snapshot_cnpj.ipynb>)
+- [notebooks/02_recorte_cidade_e_exportacao.ipynb](</C:/Users/Thiago/geoBusiness/notebooks/02_recorte_cidade_e_exportacao.ipynb>)
 - [pipeline/contratos/layout_cnpj.py](</C:/Users/Thiago/geoBusiness/pipeline/contratos/layout_cnpj.py>)
