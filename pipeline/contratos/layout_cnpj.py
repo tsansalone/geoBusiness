@@ -13,6 +13,15 @@ SNAPSHOT_PARTES = (
     "04_metadados",
 )
 
+SNAPSHOT_PARTES_OBRIGATORIAS = (
+    "00_pacote_original",
+    "02_extraido_texto",
+    "03_processado",
+    "04_metadados",
+)
+
+SNAPSHOT_PARTES_TRANSITORIAS = ("01_subarquivos_zip",)
+
 
 @dataclass(frozen=True)
 class FamiliaArquivo:
@@ -206,7 +215,7 @@ def validar_estrutura_snapshot(raiz_dados: str | Path, snapshot_mes: str) -> lis
     erros: list[str] = []
     raiz = raiz_snapshot(raiz_dados, snapshot_mes)
 
-    for parte in SNAPSHOT_PARTES:
+    for parte in SNAPSHOT_PARTES_OBRIGATORIAS:
         if not (raiz / parte).exists():
             erros.append(f"Pasta obrigatória ausente: {parte}")
 

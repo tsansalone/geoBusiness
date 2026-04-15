@@ -31,6 +31,8 @@ ZIPs internos organizados por família:
 - `simples`
 - `dominios`
 
+Esta camada é transitória. Depois que `02_extraido_texto/` estiver validada, a pasta pode ser removida para economizar espaço, pois o pacote original continua preservado em `00_pacote_original/`.
+
 ### `02_extraido_texto`
 
 Arquivos efetivamente extraídos dos ZIPs internos, ainda no padrão bruto da Receita.

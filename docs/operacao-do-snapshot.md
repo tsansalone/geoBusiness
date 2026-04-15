@@ -11,7 +11,8 @@ Garantir que cada snapshot mensal siga sempre o mesmo fluxo operacional, sem dec
 3. Extrair o conteúdo textual dos ZIPs internos para `02_extraido_texto/`.
 4. Validar estrutura, famílias e amostras.
 5. Registrar manifesto em `04_metadados/`.
-6. Só então iniciar o processamento em `03_processado/`.
+6. Opcionalmente remover `01_subarquivos_zip/` para economizar espaço.
+7. Só então iniciar o processamento em `03_processado/`.
 
 ## Regras de nome
 
@@ -19,6 +20,7 @@ Garantir que cada snapshot mensal siga sempre o mesmo fluxo operacional, sem dec
 - O pacote principal mantém o nome original do download.
 - Os arquivos em `02_extraido_texto/` mantêm o nome bruto da Receita.
 - Saídas derivadas devem usar nomes legíveis do projeto.
+- `01_subarquivos_zip/` pode ser removida depois da validação, desde que `00_pacote_original/` e `02_extraido_texto/` estejam preservadas.
 
 ## Status atual
 

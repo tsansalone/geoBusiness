@@ -26,6 +26,18 @@ dados_brutos/cnpj/AAAA-MM/
 - `03_processado` concentra saídas derivadas do projeto.
 - `04_metadados` registra validação, manifesto e observações.
 
+## Retenção da camada intermediária
+
+A pasta `01_subarquivos_zip` é útil durante a primeira extração do snapshot, mas não precisa ser mantida para sempre.
+
+Regra adotada:
+
+- manter `00_pacote_original`
+- manter `02_extraido_texto`
+- permitir a remoção de `01_subarquivos_zip` após validação da extração
+
+Isso reduz uso de disco sem perder reprodutibilidade, porque os ZIPs internos podem ser recriados a partir do pacote original.
+
 ## Famílias esperadas
 
 ### Principais para o POC

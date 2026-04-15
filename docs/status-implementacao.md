@@ -16,6 +16,7 @@ Concluído:
 - estrutura padrão para snapshots do CNPJ
 - organização do snapshot `2026-04`
 - extração dos ZIPs internos e do conteúdo textual
+- política de retenção para remover `01_subarquivos_zip` após validação
 - contrato inicial do layout CNPJ
 - scripts de inspeção, manifesto e recorte
 
