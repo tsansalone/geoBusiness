@@ -38,15 +38,18 @@ Concluído:
 - API FastAPI com rotas previstas no plano
 - dados sintéticos para o POC
 - testes básicos da API
+- camada de leitura real por parquet com fallback sintético
+- respostas principais da API agora expõem a origem do dado
 
 ## Frontend
 
 Em andamento:
 
 - aplicação Next.js em PT-BR
-- mapa analítico com grade hexagonal sintética
+- consumo da API no frontend com fallback local demonstrativo
+- mapa analítico com fallback sintético enquanto a camada espacial real não estiver disponível
 - painéis de detalhe, comparação e qualidade
-- build sintético validado com sucesso no ambiente local
+- build do frontend validado com a integração da API e fallback local
 
 Observação:
 

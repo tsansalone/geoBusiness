@@ -1,3 +1,5 @@
+export type FonteDados = "real" | "sintetica";
+
 export type Segmento = {
   id: string;
   nome: string;
@@ -26,6 +28,15 @@ export type Hexagono = {
   segmentos: Record<string, MetricasSegmento>;
 };
 
+export type HexagonoPainel = {
+  hexId: string;
+  nomeArea: string;
+  centroX: number;
+  centroY: number;
+  vizinhos: string[];
+  metricas: MetricasSegmento;
+};
+
 export type DetalheArea = {
   motivosBaixa: Array<{ motivo: string; quantidade: number }>;
   serieAberturas: number[];
@@ -35,6 +46,7 @@ export type DetalheArea = {
 
 export type QualidadeDados = {
   snapshotReferencia: string;
+  fonteDados: FonteDados;
   coberturaGeocodificacao: number;
   confiancaAlta: number;
   confiancaMedia: number;

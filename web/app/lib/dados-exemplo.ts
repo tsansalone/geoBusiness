@@ -1,4 +1,4 @@
-import type { DetalheArea, Hexagono, QualidadeDados, Segmento } from "../tipos/geobusiness";
+import type { DetalheArea, Hexagono, HexagonoPainel, QualidadeDados, Segmento } from "../tipos/geobusiness";
 
 export const cidadePadrao = "Praia Grande - SP";
 
@@ -109,6 +109,7 @@ export const detalhesArea: Record<string, DetalheArea> = {
 
 export const qualidadeDados: QualidadeDados = {
   snapshotReferencia: "2026-04",
+  fonteDados: "sintetica",
   coberturaGeocodificacao: 0.87,
   confiancaAlta: 0.71,
   confiancaMedia: 0.16,
@@ -117,3 +118,15 @@ export const qualidadeDados: QualidadeDados = {
   arquivosPrevistos: ["Empresas", "Estabelecimentos", "Simples", "CNAEs", "Motivos", "Municipios", "Naturezas"],
   arquivosProcessados: ["Empresas", "Estabelecimentos", "Simples", "CNAEs", "Motivos", "Municipios", "Naturezas"]
 };
+
+export function obterHexagonosPainelExemplo(segmentoId: string): HexagonoPainel[] {
+  const segmentoFallback = hexagonos[0].segmentos[segmentoId] ? segmentoId : segmentos[0].id;
+  return hexagonos.map((hexagono) => ({
+    hexId: hexagono.hexId,
+    nomeArea: hexagono.nomeArea,
+    centroX: hexagono.centroX,
+    centroY: hexagono.centroY,
+    vizinhos: hexagono.vizinhos,
+    metricas: hexagono.segmentos[segmentoFallback]
+  }));
+}

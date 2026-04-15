@@ -36,6 +36,7 @@ Ele executa:
 
 - rotas da API com base sintética
 - integridade do scaffold do frontend
+- integração do frontend com a API local e fallback demonstrativo
 - regressões estruturais óbvias no repositório
 
 ## Resultado mais recente
@@ -43,7 +44,7 @@ Ele executa:
 Validação local já confirmada neste repositório:
 
 - `tsc --noEmit` do frontend passou
-- `next build` do frontend passou com a base sintética
+- `next build` do frontend passou com a integração da API e fallback local
 
 Limitação do ambiente atual:
 

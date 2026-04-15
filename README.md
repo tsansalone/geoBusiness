@@ -13,7 +13,7 @@ O projeto foi estruturado para ajudar analistas a responder perguntas como:
 
 O foco do v1 é uma aplicação analítica explicável, barata de desenvolver e pronta para crescer quando os snapshots reais do CNPJ estiverem disponíveis.
 
-No momento, a cidade-alvo padrão do POC é `Praia Grande - SP`. Enquanto o primeiro recorte real ainda não foi processado ponta a ponta, a API e a interface continuam usando uma base analítica sintética para prototipação.
+No momento, a cidade-alvo padrão do POC é `Praia Grande - SP`. O projeto já possui `recorte` real local, notebooks para evoluir até `analitico`, API com leitura real via parquet e fallback sintético, e interface preparada para sinalizar quando está em modo demonstrativo.
 
 ## Princípios do repositório
 
@@ -83,6 +83,14 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 5. Carregar as tabelas analíticas no banco.
 6. Usar a API para servir métricas e a aplicação web para exploração.
 
+Sequência atual dos notebooks:
+
+1. `01_inspecao_snapshot_cnpj.ipynb`
+2. `02_recorte_cidade_e_exportacao.ipynb`
+3. `03_preparacao_recorte.ipynb`
+4. `04_geocodificacao_hibrida.ipynb`
+5. `05_agregacao_espacial_h3.ipynb`
+
 ## Documentação principal
 
 - [Arquitetura](</C:/Users/Thiago/geoBusiness/docs/arquitetura.md>)
@@ -102,11 +110,24 @@ O repositório inclui um `docker-compose.yml` com PostgreSQL + PostGIS em [infra
 Este scaffold entrega:
 
 - backend com rotas previstas no plano
-- frontend em PT-BR com filtros, mapa hexagonal sintético e painéis analíticos
+- frontend em PT-BR com filtros, consumo da API e fallback local demonstrativo
 - dados de exemplo coerentes entre API e web
 - contrato inicial da pipeline e amostras sintéticas do CNPJ
 - fluxo de Colab preparado para partir apenas do ZIP mensal original
+- notebooks para `recorte`, `preparado`, geocodificação híbrida e agregação H3
+- API pronta para ler `processado/analitico` quando os parquets reais estiverem disponíveis
 - documentação-base para evolução do projeto
+
+## Publicação no GitHub
+
+O repositório local já está preparado para publicação. O remoto ainda depende da criação do repositório no GitHub.
+
+Comandos esperados depois de criar o repo vazio:
+
+```bash
+git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+git push -u origin main
+```
 
 ## Fontes de referência
 
