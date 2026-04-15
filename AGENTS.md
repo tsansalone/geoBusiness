@@ -57,14 +57,14 @@ Responsável por arquitetura, modelo de dados, qualidade, métricas, snapshots, 
 
 No computador local, manter preferencialmente apenas:
 
-- `dados_brutos/cnpj/AAAA-MM/00_pacote_original/`
-- `dados_brutos/cnpj/AAAA-MM/04_metadados/`
+- `dados_brutos/cnpj/AAAA-MM/original/`
+- `dados_brutos/cnpj/AAAA-MM/metadados/`
 
 Não manter por padrão:
 
-- `01_subarquivos_zip`
-- `02_extraido_texto`
-- `03_processado`
+- `subarquivos_zip`
+- `extraido`
+- `processado`
 
 Essas camadas podem ser recriadas no disco temporário do Colab.
 

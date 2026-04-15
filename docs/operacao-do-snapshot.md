@@ -6,11 +6,11 @@ Garantir que cada snapshot mensal siga sempre o mesmo fluxo operacional, sem dec
 
 ## Fluxo padrão
 
-1. Salvar o pacote original em `00_pacote_original/`.
-2. Extrair o conteúdo textual para `02_extraido_texto/`.
+1. Salvar o pacote original em `original/`.
+2. Extrair o conteúdo textual para `extraido/`.
 4. Validar estrutura, famílias e amostras.
-5. Registrar manifesto em `04_metadados/`.
-6. Só então iniciar o processamento em `03_processado/`.
+5. Registrar manifesto em `metadados/`.
+6. Só então iniciar o processamento em `processado/`.
 
 Observação:
 Em fluxos automáticos no Colab, os ZIPs internos podem existir apenas em pasta temporária e ser removidos no mesmo notebook.
@@ -19,9 +19,9 @@ Em fluxos automáticos no Colab, os ZIPs internos podem existir apenas em pasta 
 
 - O nome do snapshot é sempre `AAAA-MM`.
 - O pacote principal mantém o nome original do download.
-- Os arquivos em `02_extraido_texto/` mantêm o nome bruto da Receita.
+- Os arquivos em `extraido/` mantêm o nome bruto da Receita.
 - Saídas derivadas devem usar nomes legíveis do projeto.
-- `01_subarquivos_zip/` não precisa existir como pasta persistente quando a extração for feita diretamente a partir do ZIP principal em ambiente temporário.
+- `subarquivos_zip/` não precisa existir como pasta persistente quando a extração for feita diretamente a partir do ZIP principal em ambiente temporário.
 
 ## Status atual
 

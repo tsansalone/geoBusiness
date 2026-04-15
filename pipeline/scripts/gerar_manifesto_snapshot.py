@@ -23,17 +23,17 @@ def main() -> None:
         "erros_validacao": validar_estrutura_snapshot(args.raiz_dados, args.snapshot_mes),
         "resumo_familias": gerar_resumo_familias(args.raiz_dados, args.snapshot_mes),
         "camadas": {
-            "pacote_original": "00_pacote_original",
-            "subarquivos_zip": "01_subarquivos_zip",
-            "arquivos_extraidos": "02_extraido_texto",
-            "processado": "03_processado",
-            "metadados": "04_metadados",
+            "original": "original",
+            "subarquivos_zip": "subarquivos_zip",
+            "extraido": "extraido",
+            "processado": "processado",
+            "metadados": "metadados",
         },
     }
     if manifesto["erros_validacao"]:
         manifesto["status_validacao"] = "incompleto"
 
-    destino = base / "04_metadados" / "manifest.json"
+    destino = base / "metadados" / "manifest.json"
     destino.write_text(json.dumps(manifesto, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Manifesto salvo em: {destino}")
 

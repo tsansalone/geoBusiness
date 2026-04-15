@@ -1,0 +1,8 @@
+﻿snapshot_mes=2026-04
+fonte=Dados Abertos do CNPJ - Receita Federal
+original=original\2026-04.zip
+subarquivos_zip=
+extraido=
+processado=
+metadados=metadados
+status=zip_original_preservado_para_processamento_no_colab

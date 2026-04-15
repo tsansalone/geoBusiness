@@ -6,21 +6,21 @@ from typing import Iterable
 
 
 SNAPSHOT_PARTES = (
-    "00_pacote_original",
-    "01_subarquivos_zip",
-    "02_extraido_texto",
-    "03_processado",
-    "04_metadados",
+    "original",
+    "subarquivos_zip",
+    "extraido",
+    "processado",
+    "metadados",
 )
 
 SNAPSHOT_PARTES_OBRIGATORIAS = (
-    "00_pacote_original",
-    "02_extraido_texto",
-    "03_processado",
-    "04_metadados",
+    "original",
+    "extraido",
+    "processado",
+    "metadados",
 )
 
-SNAPSHOT_PARTES_TRANSITORIAS = ("01_subarquivos_zip",)
+SNAPSHOT_PARTES_TRANSITORIAS = ("subarquivos_zip",)
 
 
 @dataclass(frozen=True)
@@ -182,12 +182,12 @@ def raiz_snapshot(raiz_dados: str | Path, snapshot_mes: str) -> Path:
 
 def pasta_familia_zip(raiz_dados: str | Path, snapshot_mes: str, familia: str) -> Path:
     definicao = FAMILIAS_CNPJ[familia]
-    return raiz_snapshot(raiz_dados, snapshot_mes) / "01_subarquivos_zip" / definicao.pasta_zip
+    return raiz_snapshot(raiz_dados, snapshot_mes) / "subarquivos_zip" / definicao.pasta_zip
 
 
 def pasta_familia_extraida(raiz_dados: str | Path, snapshot_mes: str, familia: str) -> Path:
     definicao = FAMILIAS_CNPJ[familia]
-    return raiz_snapshot(raiz_dados, snapshot_mes) / "02_extraido_texto" / definicao.pasta_extraida
+    return raiz_snapshot(raiz_dados, snapshot_mes) / "extraido" / definicao.pasta_extraida
 
 
 def classificar_zip(nome_arquivo: str) -> str | None:

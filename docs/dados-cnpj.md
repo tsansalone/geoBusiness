@@ -15,8 +15,8 @@ dados_brutos/cnpj/AAAA-MM/
 Esta é a estrutura que preferimos manter no computador local:
 
 ```text
-00_pacote_original/
-04_metadados/
+original/
+metadados/
 ```
 
 ### Estrutura de trabalho temporária
@@ -24,31 +24,31 @@ Esta é a estrutura que preferimos manter no computador local:
 Esta é a estrutura que os notebooks podem montar no Colab durante o processamento:
 
 ```text
-00_pacote_original/
-01_subarquivos_zip/
-02_extraido_texto/
-03_processado/
-04_metadados/
+original/
+subarquivos_zip/
+extraido/
+processado/
+metadados/
 ```
 
 ## Motivo da divisão
 
-- `00_pacote_original` preserva a origem exata do download.
-- `01_subarquivos_zip` organiza os ZIPs internos da Receita por família.
-- `02_extraido_texto` contém os arquivos brutos realmente lidos pela pipeline.
-- `03_processado` concentra saídas derivadas do projeto.
-- `04_metadados` registra validação, manifesto e observações.
+- `original` preserva a origem exata do download.
+- `subarquivos_zip` organiza os ZIPs internos da Receita por família.
+- `extraido` contém os arquivos brutos realmente lidos pela pipeline.
+- `processado` concentra saídas derivadas do projeto.
+- `metadados` registra validação, manifesto e observações.
 
 ## Retenção da camada intermediária
 
-A pasta `01_subarquivos_zip` é útil durante a primeira extração do snapshot, mas não precisa ser mantida para sempre.
+A pasta `subarquivos_zip` é útil durante a primeira extração do snapshot, mas não precisa ser mantida para sempre.
 
 Regra adotada para o ambiente local:
 
-- manter `00_pacote_original`
-- manter `04_metadados`
-- não manter `02_extraido_texto` por padrão
-- não manter `01_subarquivos_zip` por padrão
+- manter `original`
+- manter `metadados`
+- não manter `extraido` por padrão
+- não manter `subarquivos_zip` por padrão
 
 Isso reduz uso de disco sem perder reprodutibilidade, porque a árvore de trabalho pode ser recriada a partir do pacote original.
 
@@ -76,7 +76,7 @@ Para reduzir uso de disco local, o fluxo preferencial do projeto passa a ser:
 
 ## Arquivos extraídos
 
-Os arquivos em `02_extraido_texto` permanecem com o nome bruto da Receita Federal. Isso é intencional, porque:
+Os arquivos em `extraido` permanecem com o nome bruto da Receita Federal. Isso é intencional, porque:
 
 - facilita rastreabilidade
 - reduz ambiguidade durante auditoria

@@ -15,8 +15,8 @@ O projeto trabalha com dois contextos diferentes:
 dados_brutos/
   cnpj/
     AAAA-MM/
-      00_pacote_original/
-      04_metadados/
+      original/
+      metadados/
 ```
 
 ### Estrutura completa temporária
@@ -27,20 +27,20 @@ Quando um notebook prepara o snapshot no Colab, a árvore de trabalho pode inclu
 dados_brutos/
   cnpj/
     AAAA-MM/
-      00_pacote_original/
-      01_subarquivos_zip/
-      02_extraido_texto/
-      03_processado/
-      04_metadados/
+      original/
+      subarquivos_zip/
+      extraido/
+      processado/
+      metadados/
 ```
 
 ## Camadas
 
-### `00_pacote_original`
+### `original`
 
 Pacote exatamente como foi baixado da Receita Federal.
 
-### `01_subarquivos_zip`
+### `subarquivos_zip`
 
 ZIPs internos organizados por família:
 
@@ -50,15 +50,15 @@ ZIPs internos organizados por família:
 - `simples`
 - `dominios`
 
-Esta camada é transitória. No fluxo preferencial do Colab, ela pode existir apenas em pasta temporária durante a extração e ser removida no mesmo notebook. Se for criada localmente, pode ser removida depois que `02_extraido_texto/` estiver validada, pois o pacote original continua preservado em `00_pacote_original/`.
+Esta camada é transitória. No fluxo preferencial do Colab, ela pode existir apenas em pasta temporária durante a extração e ser removida no mesmo notebook. Se for criada localmente, pode ser removida depois que `extraido/` estiver validada, pois o pacote original continua preservado em `original/`.
 
-### `02_extraido_texto`
+### `extraido`
 
 Arquivos efetivamente extraídos dos ZIPs internos, ainda no padrão bruto da Receita.
 
 No fluxo atual, essa camada deve existir preferencialmente apenas no disco temporário do Colab.
 
-### `03_processado`
+### `processado`
 
 Saídas operacionais da pipeline:
 
@@ -66,14 +66,14 @@ Saídas operacionais da pipeline:
 - `silver`
 - `gold`
 
-### `04_metadados`
+### `metadados`
 
 Manifestos, checksums, observações e resultados de validação do snapshot.
 
 ## Regras
 
-- Não renomear os arquivos brutos da Receita dentro de `02_extraido_texto`.
+- Não renomear os arquivos brutos da Receita dentro de `extraido`.
 - Não editar arquivos de origem manualmente.
-- Preferir artefatos derivados em `03_processado`.
-- Registrar toda observação importante em `04_metadados`.
+- Preferir artefatos derivados em `processado`.
+- Registrar toda observação importante em `metadados`.
 - Quando houver limitação de espaço local, preferir armazenar apenas o ZIP mensal original e deixar a extração para o ambiente temporário do Colab.

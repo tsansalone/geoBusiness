@@ -23,6 +23,12 @@ out/
 # Dados grandes e artefatos locais
 dados_brutos/*
 !dados_brutos/README.md
+!dados_brutos/cnpj/
+dados_brutos/cnpj/*
+!dados_brutos/cnpj/*/
+dados_brutos/cnpj/*/*
+!dados_brutos/cnpj/*/metadados/
+!dados_brutos/cnpj/*/metadados/**
 artefatos/
 tmp/
 

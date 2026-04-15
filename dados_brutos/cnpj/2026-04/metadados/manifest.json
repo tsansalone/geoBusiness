@@ -1,0 +1,17 @@
+﻿{
+  "snapshot_mes": "2026-04",
+  "fonte": "Dados Abertos do CNPJ - Receita Federal",
+  "status": "zip_original_preservado_para_processamento_no_colab",
+  "camadas": {
+    "original": "original/2026-04.zip",
+    "subarquivos_zip": null,
+    "extraido": null,
+    "processado": null,
+    "metadados": "metadados"
+  },
+  "observacoes": [
+    "Esta cópia local mantém apenas o ZIP mensal original para economizar espaço.",
+    "A extração e o processamento devem acontecer no disco temporário do Colab.",
+    "Se necessário, a estrutura de trabalho pode ser recriada a partir de original/."
+  ]
+}

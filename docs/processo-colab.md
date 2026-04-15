@@ -9,7 +9,7 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 ## Fluxo sugerido
 
 1. Fazer upload do ZIP mensal original para o disco local da instância Colab.
-2. Executar o notebook para mover o ZIP para `00_pacote_original` e extrair os arquivos para `02_extraido_texto`.
+2. Executar o notebook para mover o ZIP para `original` e extrair os arquivos para `extraido`.
 3. Ler os arquivos texto com separador `;`.
 4. Validar colunas esperadas com base no contrato do projeto.
 5. Filtrar a cidade-alvo.
@@ -25,7 +25,7 @@ O fluxo recomendado passa a ser: manter localmente apenas o ZIP mensal original 
 - Registrar versão do notebook e parâmetros usados.
 - Não commitar snapshots brutos grandes no Git.
 - Preferir o disco local da instância (`/content`) em vez de ocupar espaço no Google Drive.
-- Evitar manter `02_extraido_texto` no computador local quando o objetivo for apenas produzir artefatos processados.
+- Evitar manter `extraido` no computador local quando o objetivo for apenas produzir artefatos processados.
 
 ## Artefatos esperados
 
